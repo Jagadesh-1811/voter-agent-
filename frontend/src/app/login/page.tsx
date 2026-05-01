@@ -106,6 +106,8 @@ export default function LoginPage() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
+                role="alert"
+                aria-live="polite"
                 className="w-full mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-xl flex items-start gap-3"
               >
                 <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
@@ -123,6 +125,8 @@ export default function LoginPage() {
                 disabled={isLoading}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
+                aria-label="Sign in with Google account"
+                aria-busy={isLoading}
                 className="w-full group relative bg-gradient-to-r from-lime to-lime/80 hover:shadow-[0_0_30px_rgba(212,242,104,0.4)] text-stone-black font-bold py-4 px-6 rounded-2xl transition-all duration-300 disabled:opacity-50 disabled:pointer-events-none overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

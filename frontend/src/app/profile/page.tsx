@@ -146,6 +146,8 @@ export default function ProfilePage() {
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
+                role="alert"
+                aria-live="polite"
                 className="w-full mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-xl flex items-start gap-3"
               >
                 <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
@@ -156,10 +158,11 @@ export default function ProfilePage() {
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Full Name */}
               <motion.div variants={itemVariants}>
-                <label className="block text-sm font-semibold text-white mb-2">
+                <label htmlFor="fullName" className="block text-sm font-semibold text-white mb-2">
                   Full Name
                 </label>
                 <input
+                  id="fullName"
                   type="text"
                   value={formData.fullName}
                   onChange={(e) =>
@@ -169,7 +172,10 @@ export default function ProfilePage() {
                     }))
                   }
                   placeholder="Enter your full name"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-stone/40 focus:outline-none focus:border-lime transition-colors"
+                  required
+                  aria-required="true"
+                  aria-label="Enter your full name"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder:text-stone/40 focus:outline-none focus:border-lime transition-colors focus:ring-2 focus:ring-lime/50"
                 />
               </motion.div>
 
@@ -182,7 +188,8 @@ export default function ProfilePage() {
               >
                 <button
                   type="submit"
-                  className="flex-1 bg-gradient-to-r from-lime to-lime/80 hover:shadow-[0_0_30px_rgba(212,242,104,0.4)] text-stone-black font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                  aria-label="Complete profile and continue to voter assistant"
+                  className="flex-1 bg-gradient-to-r from-lime to-lime/80 hover:shadow-[0_0_30px_rgba(212,242,104,0.4)] text-stone-black font-bold py-3 px-6 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime/50"
                 >
                   <div className="flex items-center justify-center gap-2">
                     <span>Complete Profile</span>
@@ -192,7 +199,8 @@ export default function ProfilePage() {
                 <button
                   type="button"
                   onClick={() => signOut(auth)}
-                  className="px-6 py-3 bg-gradient-to-r from-lime/70 to-lime/50 text-stone-black font-semibold rounded-lg hover:shadow-[0_0_20px_rgba(212,242,104,0.3)] transition-all"
+                  aria-label="Sign out from your account"
+                  className="px-6 py-3 bg-gradient-to-r from-lime/70 to-lime/50 text-stone-black font-semibold rounded-lg hover:shadow-[0_0_20px_rgba(212,242,104,0.3)] transition-all focus:outline-none focus:ring-2 focus:ring-lime/50"
                 >
                   Logout
                 </button>
