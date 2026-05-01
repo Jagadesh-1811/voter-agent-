@@ -14,7 +14,8 @@
 - **RAG-Powered AI Assistant**: Context-aware chat grounded in 100+ verified election records to eliminate hallucinations.
 - **Multi-Session History**: Smart sidebar for managing multiple chat sessions with local persistence.
 - **Premium Glassmorphic UI**: High-fidelity interface built with Next.js, Framer Motion, and Tailwind CSS.
-- **Privacy First**: Local-first session management—your data stays in your browser.
+- **Privacy First**: Unique local-first session management. Your entire chat history is stored in your browser's local cache (LocalStorage), ensuring absolute privacy and zero server-side data persistence.
+- **Instant Persistence**: Leverages the local cache for lightning-fast history retrieval and multi-session management without the need for a traditional database.
 - **Hyper-Local Intelligence**: Detailed insights into registration, polling locations, and eligibility.
 
 ---
