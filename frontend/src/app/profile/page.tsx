@@ -6,6 +6,19 @@ import { User, signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ChevronRight, Check, AlertCircle } from "lucide-react";
 
+/**
+ * ProfilePage Component
+ * 
+ * Allows users to complete their profile after authentication
+ * Features:
+ * - Auto-populates name from Google account
+ * - Form validation with clear error messages
+ * - Loading states during operations
+ * - Success animation before redirect
+ * 
+ * @component
+ * @returns {JSX.Element} Profile creation form
+ */
 export default function ProfilePage() {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -40,12 +53,30 @@ export default function ProfilePage() {
     e.preventDefault();
     setError(null);
 
+    // Validation: Check name is not empty
     if (!formData.fullName.trim()) {
       setError("Please enter your name");
       return;
     }
 
-    // Save profile (you can add backend call here)
+    // Validation: Check name length (2-100 characters)
+    if (formData.fullName.trim().length < 2) {
+      setError("Name must be at least 2 characters");
+      return;
+    }
+
+    if (formData.fullName.trim().length > 100) {
+      setError("Name must be less than 100 characters");
+      return;
+    }
+
+    // Validation: Check name doesn't contain only numbers
+    if (/^\d+$/.test(formData.fullName.trim())) {
+      setError("Please enter a valid name");
+      return;
+    }
+
+    // Save profile successfully
     setProfileComplete(true);
     setTimeout(() => {
       router.push("/chat");

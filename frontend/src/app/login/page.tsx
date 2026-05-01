@@ -6,11 +6,43 @@ import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { Sparkles, ShieldCheck, ChevronRight, CheckCircle, AlertCircle } from "lucide-react";
 
+/**
+ * LoginPage Component
+ * 
+ * Handles user authentication via Google OAuth
+ * Features:
+ * - Google Sign-In button with Firebase integration
+ * - Error handling for popup-blocked and user-cancelled scenarios
+ * - Loading state during authentication
+ * - Smooth animations with Framer Motion
+ * - Responsive design for all device sizes
+ * 
+ * @component
+ * @returns {JSX.Element} Login page with OAuth authentication interface
+ */
 export default function LoginPage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
+  /**
+   * Handles Google OAuth sign-in
+   * 
+   * Process:
+   * 1. Creates Google authentication provider
+   * 2. Opens OAuth popup for user authentication
+   * 3. Redirects to profile page on success
+   * 4. Shows error message on failure
+   * 
+   * Error handling:
+   * - Popup blocked: Instructs user to allow popups
+   * - Popup closed: Prompts user to try again
+   * - Other errors: Generic error message
+   * 
+   * @async
+   * @function
+   * @returns {Promise<void>}
+   */
   const handleGoogleLogin = async () => {
     setIsLoading(true);
     setError(null);

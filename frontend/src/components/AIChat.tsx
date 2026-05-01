@@ -19,6 +19,14 @@ import {
   Copy,
 } from "lucide-react";
 
+/**
+ * Message interface for chat system
+ * @interface Message
+ * @property {string} id - Unique message identifier
+ * @property {"user" | "assistant"} role - Message sender role
+ * @property {string} content - Message text content
+ * @property {Date} timestamp - When message was created
+ */
 interface Message {
   id: string;
   role: "user" | "assistant";
@@ -50,6 +58,27 @@ const WELCOME_MESSAGE: Message = {
 
 const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
 
+/**
+ * AIChat Component
+ * 
+ * Main chat interface for VoteAgent voter assistant
+ * 
+ * Features:
+ * - Multi-session chat history management
+ * - LocalStorage persistence for chat sessions
+ * - RAG-powered AI responses via backend API
+ * - Markdown rendering for rich text responses
+ * - Responsive sidebar for session navigation
+ * - Suggested questions for new users
+ * 
+ * Architecture:
+ * - Frontend: React with Framer Motion animations
+ * - Backend: Python Flask with RAG system
+ * - Storage: Browser LocalStorage (privacy-first)
+ * 
+ * @component
+ * @returns {JSX.Element} Interactive chat interface
+ */
 export default function AIChat() {
   const [sessions, setSessions] = useState<ChatSession[]>([]);
   const [currentSessionId, setCurrentSessionId] = useState("");
