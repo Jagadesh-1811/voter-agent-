@@ -1,4 +1,4 @@
-# 🗳️ VoteAgent: Your Intelligent Election Guide
+# VoteAgent: Your Intelligent Election Guide
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js%2014-black?logo=next.js)](https://nextjs.org/)
@@ -9,17 +9,17 @@
 
 ---
 
-## ✨ Key Features
+## Key Features
 
-- 🤖 **RAG-Powered AI Assistant**: Context-aware chat grounded in 100+ verified election records to eliminate hallucinations.
-- 📜 **Multi-Session History**: Smart sidebar for managing multiple chat sessions with local persistence.
-- 🎨 **Premium Glassmorphic UI**: High-fidelity interface built with Next.js, Framer Motion, and Tailwind CSS.
-- 🛡️ **Privacy First**: Local-first session management—your data stays in your browser.
-- 📍 **Hyper-Local Intelligence**: Detailed insights into registration, polling locations, and eligibility.
+- **RAG-Powered AI Assistant**: Context-aware chat grounded in 100+ verified election records to eliminate hallucinations.
+- **Multi-Session History**: Smart sidebar for managing multiple chat sessions with local persistence.
+- **Premium Glassmorphic UI**: High-fidelity interface built with Next.js, Framer Motion, and Tailwind CSS.
+- **Privacy First**: Local-first session management—your data stays in your browser.
+- **Hyper-Local Intelligence**: Detailed insights into registration, polling locations, and eligibility.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - **Node.js** v18.0+
@@ -52,7 +52,7 @@ uvicorn main:app --reload
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 | :--- | :--- |
@@ -63,7 +63,7 @@ uvicorn main:app --reload
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```text
 voter-agent/
@@ -80,7 +80,7 @@ voter-agent/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions to help make voting more accessible! 
 1. Fork the Project
@@ -91,11 +91,11 @@ We welcome contributions to help make voting more accessible!
 
 ---
 
-## ⚖️ License
+## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 <p align="center">
-  Built with ❤️ for a more informed and engaged electorate.
+  Built for a more informed and engaged electorate.
 </p>
