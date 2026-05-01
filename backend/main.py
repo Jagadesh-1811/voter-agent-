@@ -1,5 +1,4 @@
 import os
-import asyncio
 import uuid
 from contextlib import asynccontextmanager
 
@@ -114,3 +113,8 @@ async def chat_history(user_id: str, session_id: str):
         return {"session_id": session_id, "messages": messages}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)

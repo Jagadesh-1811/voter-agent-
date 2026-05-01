@@ -2,9 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { auth } from "@/lib/firebase";
+import { User, signOut } from "firebase/auth";
+import { LogOut } from "lucide-react";
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +18,19 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleLogout = async () => {
+    await signOut(auth);
+  };
 
   return (
     <motion.nav
@@ -52,10 +70,37 @@ export const Navbar = () => {
             ))}
           </div>
 
-                    {/* CTA Button */}
-          <Link href="/chat" className="btn-primary">
-            Voter Assistant
-          </Link>
+                    {/* CTA Button - Auth Aware */}
+          <div className="flex items-center gap-3">
+            {!loading && (
+              <>
+                {user ? (
+                  <div className="flex items-center gap-3">
+                    <div className="text-right hidden sm:block">
+                      <p className="text-xs text-stone/60">Welcome,</p>
+                      <p className="text-sm font-semibold text-white truncate max-w-[120px]">
+                        {user.displayName || user.email?.split("@")[0] || "User"}
+                      </p>
+                    </div>
+                    <button
+                      onClick={handleLogout}
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-lime/70 to-lime/50 text-stone-black font-semibold hover:shadow-[0_0_20px_rgba(212,242,104,0.3)] transition-all text-sm"
+                    >
+                      <LogOut className="w-4 h-4" />
+                      <span className="hidden sm:inline">Logout</span>
+                    </button>
+                  </div>
+                ) : (
+                  <Link
+                    href="/login"
+                    className="px-6 py-2.5 rounded-lg bg-gradient-to-r from-lime to-lime/80 text-stone-black font-semibold hover:shadow-[0_0_20px_rgba(212,242,104,0.3)] transition-all"
+                  >
+                    Sign In
+                  </Link>
+                )}
+              </>
+            )}
+          </div>
         </div>
       </div>
     </motion.nav>

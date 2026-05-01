@@ -3,9 +3,23 @@ import { motion } from "framer-motion";
 import { Navbar } from "@/components/synapse/Navbar";
 import { Footer } from "@/components/synapse/Footer";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { auth } from "@/lib/firebase";
+import { User } from "firebase/auth";
 
 export default function Home() {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
   return (
     <main className="min-h-screen bg-stone-black text-stone">
       {/* Noise Overlay */}
@@ -44,9 +58,22 @@ export default function Home() {
               </p>
 
                                           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                                <Link href="/chat" className="cta-button">
-                  Ask for Voter Assistant
-                </Link>
+                {!loading && (
+                  user ? (
+                    <Link href="/chat" className="cta-button">
+                      Ask for Voter Assistant
+                    </Link>
+                  ) : (
+                    <>
+                      <Link href="/login" className="cta-button">
+                        Get Started
+                      </Link>
+                      <Link href="/chat" className="px-8 py-4 rounded-full border-2 border-lime text-lime hover:bg-lime/10 transition-all font-semibold">
+                        Try Demo
+                      </Link>
+                    </>
+                  )
+                )}
               </div>
             </motion.div>
 

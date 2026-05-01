@@ -15,7 +15,8 @@ import {
   RotateCcw,
   Clock,
   Sparkles,
-  ChevronLeft
+  ChevronLeft,
+  Copy,
 } from "lucide-react";
 
 interface Message {
@@ -239,6 +240,9 @@ export default function AIChat() {
       updateSessionMessages(currentSessionId, newMessagesWithAi);
 
       try {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15s timeout
+
         const res = await fetch(`${BACKEND}/api/chat/stream`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -247,7 +251,10 @@ export default function AIChat() {
             session_id: currentSessionId,
             message: text.trim(),
           }),
+          signal: controller.signal
         });
+
+        clearTimeout(timeoutId);
 
         if (!res.body) throw new Error("No response stream");
 
@@ -285,11 +292,8 @@ export default function AIChat() {
                 m.id === aiMsgId ? { ...m, content: currentAccumulated } : m
               )
             );
-            // We only update the sessions list occasionally or at the end to avoid lag during rapid streaming
-            // But for correctness, we update sessions at the end of the stream.
           }
         }
-        // Final update to sessions after stream completes
         setMessages(prev => {
           updateSessionMessages(currentSessionId, prev);
           return prev;
@@ -321,7 +325,7 @@ export default function AIChat() {
   };
 
   return (
-    <div className="flex h-screen w-full relative overflow-hidden bg-stone-black">
+    <div className="flex h-screen w-full relative overflow-hidden bg-stone-black" role="main">
       {/* Sidebar Overlay (Mobile) */}
       <AnimatePresence>
         {isSidebarOpen && (
@@ -331,11 +335,12 @@ export default function AIChat() {
             exit={{ opacity: 0 }}
             onClick={() => setIsSidebarOpen(false)}
             className="absolute inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
+            aria-hidden="true"
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
+      {/* Navigation Sidebar */}
       <motion.aside
         initial={false}
         animate={{ 
@@ -345,37 +350,41 @@ export default function AIChat() {
         }}
         transition={{ type: "spring", damping: 25, stiffness: 200 }}
         className={`absolute lg:relative z-50 h-full bg-[#0C0A09] border-r border-white/5 flex flex-col shadow-2xl ${!isSidebarOpen && "pointer-events-none"}`}
+        aria-label="Chat History Sidebar"
       >
         <div className="p-6 h-20 flex items-center justify-between border-b border-white/5 shrink-0">
           <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5 text-lime/60" />
+            <Clock className="w-5 h-5 text-lime/60" aria-hidden="true" />
             <h3 className="serif text-xl text-white font-medium">History</h3>
           </div>
           <button 
             onClick={startNewChat}
             className="p-2.5 rounded-xl bg-lime text-stone-black hover:scale-105 transition-all shadow-lg shadow-lime/20"
-            title="New Chat"
+            title="Start New Chat"
+            aria-label="Start a new chat session"
           >
             <Plus className="w-5 h-5" />
           </button>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-4 space-y-2 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-4 space-y-2 custom-scrollbar" role="list">
           {sessions.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-40 text-stone/20">
-              <MessageSquare className="w-10 h-10 mb-2 opacity-10" />
+              <MessageSquare className="w-10 h-10 mb-2 opacity-10" aria-hidden="true" />
               <p className="text-xs uppercase tracking-widest">No history yet</p>
             </div>
           ) : (
             sessions.map((session) => (
               <div
                 key={session.id}
+                role="listitem"
                 onClick={() => switchSession(session.id)}
                 className={`group flex items-center justify-between p-4 rounded-2xl cursor-pointer transition-all ${
                   currentSessionId === session.id 
                     ? "bg-lime/10 border border-lime/30 shadow-inner" 
                     : "hover:bg-white/5 border border-transparent"
                 }`}
+                aria-current={currentSessionId === session.id ? "true" : "false"}
               >
                 <div className="flex-1 min-w-0">
                   <p className={`text-sm truncate ${currentSessionId === session.id ? "text-lime font-medium" : "text-stone/60 group-hover:text-stone"}`}>
@@ -390,6 +399,7 @@ export default function AIChat() {
                 <button 
                   onClick={(e) => deleteSession(session.id, e)}
                   className="opacity-0 group-hover:opacity-100 p-2 text-stone/40 hover:text-red-400 hover:bg-red-400/10 rounded-lg transition-all"
+                  aria-label={`Delete chat session ${session.title}`}
                 >
                   <Trash2 className="w-4 h-4" />
                 </button>
@@ -403,6 +413,7 @@ export default function AIChat() {
             <button 
               onClick={clearAllHistory}
               className="w-full flex items-center justify-center gap-2 p-3 text-xs text-stone/40 hover:text-red-400 hover:bg-red-400/5 rounded-xl transition-all border border-transparent hover:border-red-400/20"
+              aria-label="Clear all chat history"
             >
               <RotateCcw className="w-4 h-4" />
               Clear All History
@@ -411,12 +422,12 @@ export default function AIChat() {
         )}
       </motion.aside>
 
-      {/* Main Chat Area */}
+      {/* Main Chat Interface */}
       <div className="flex-1 flex flex-col h-full relative min-w-0 bg-stone-black">
         <div className="absolute inset-0 bg-linear-to-b from-lime/[0.03] to-transparent pointer-events-none" />
         
-        {/* Header */}
-        <div className="flex items-center justify-between px-6 lg:px-8 h-20 border-b border-white/5 z-10 bg-stone-black/60 backdrop-blur-xl shrink-0">
+        {/* Chat Header */}
+        <header className="flex items-center justify-between px-6 lg:px-8 h-20 border-b border-white/5 z-10 bg-stone-black/60 backdrop-blur-xl shrink-0">
           <div className="flex items-center gap-4">
             <button 
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
@@ -425,13 +436,15 @@ export default function AIChat() {
                   ? "bg-white/5 text-stone/60 hover:text-lime hover:bg-white/10" 
                   : "bg-lime text-stone-black shadow-lg shadow-lime/20 scale-105"
               }`}
+              aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
+              aria-expanded={isSidebarOpen}
             >
               {isSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
             
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-2xl bg-lime flex items-center justify-center shadow-[0_0_20px_rgba(212,242,104,0.3)] rotate-3 hover:rotate-0 transition-transform">
-                <Sparkles className="w-5 h-5 text-stone-black" />
+                <Sparkles className="w-5 h-5 text-stone-black" aria-hidden="true" />
               </div>
               <div className="hidden sm:block">
                 <h2 className="text-white font-semibold text-sm lg:text-base">Voter Assistant AI</h2>
@@ -447,6 +460,7 @@ export default function AIChat() {
             <Link 
               href="/" 
               className="px-4 py-2 rounded-xl bg-white/5 text-stone/60 hover:text-lime hover:bg-white/10 transition-all text-xs border border-white/5 font-medium flex items-center gap-2 group"
+              aria-label="Back to landing page"
             >
               <Home className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
               <span className="hidden xs:inline">Home</span>
@@ -454,15 +468,16 @@ export default function AIChat() {
             <button 
               onClick={() => window.print()}
               className="p-2.5 rounded-xl bg-white/5 text-stone/60 hover:text-lime hover:bg-white/10 transition-all border border-white/5 group"
-              title="Print/Save as PDF"
+              title="Print conversation"
+              aria-label="Print or save conversation as PDF"
             >
               <Download className="w-4.5 h-4.5 group-hover:scale-110 transition-transform" />
             </button>
           </div>
-        </div>
+        </header>
 
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth">
+        {/* Message Thread */}
+        <section className="flex-1 overflow-y-auto custom-scrollbar scroll-smooth" aria-label="Conversation Thread">
           <div className="max-w-4xl mx-auto px-6 py-12 space-y-10">
             <AnimatePresence initial={false}>
               {messages.map((msg) => (
@@ -480,12 +495,26 @@ export default function AIChat() {
                   )}
 
                   <div
-                    className={`max-w-[85%] rounded-[24px] px-6 py-4 text-sm leading-relaxed transition-all shadow-sm ${
+                    className={`max-w-[85%] rounded-[24px] px-6 py-4 text-sm leading-relaxed transition-all shadow-sm relative group/msg ${
                       msg.role === "user"
                         ? "bg-lime text-stone-black rounded-tr-none font-medium shadow-[0_10px_30px_-10px_rgba(212,242,104,0.4)]"
                         : "bg-white/3 text-stone/90 rounded-tl-none border border-white/10 backdrop-blur-md"
                     } ${!msg.content && "min-w-[80px] min-h-[50px] flex items-center justify-center bg-transparent border-none shadow-none"}`}
                   >
+                    {/* Copy Button */}
+                    {msg.role === "assistant" && msg.content && (
+                      <button
+                        onClick={() => {
+                          navigator.clipboard.writeText(msg.content);
+                        }}
+                        className="absolute -right-12 top-0 p-2 rounded-xl bg-white/5 text-stone/20 hover:text-lime hover:bg-white/10 opacity-0 group-hover/msg:opacity-100 transition-all border border-transparent hover:border-white/10"
+                        title="Copy message"
+                        aria-label="Copy message to clipboard"
+                      >
+                        <Copy className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+
                     {msg.role === "assistant" ? (
                       msg.content ? (
                         <div className="space-y-4 text-stone/90">
@@ -518,7 +547,7 @@ export default function AIChat() {
                         <div className="flex items-center gap-1.5 p-2">
                           <motion.span 
                             animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
-                            transition={{ repeat: Infinity, duration: 1, delay: 0 }}
+                            transition={{ repeat: Infinity, duration: 1 }}
                             className="w-1.5 h-1.5 rounded-full bg-lime" 
                           />
                           <motion.span 
@@ -548,7 +577,7 @@ export default function AIChat() {
             </AnimatePresence>
             <div ref={endRef} className="h-4" />
           </div>
-        </div>
+        </section>
 
         {/* Input Area */}
         <div className="w-full bg-stone-black/80 backdrop-blur-2xl border-t border-white/5 shrink-0">
@@ -563,7 +592,7 @@ export default function AIChat() {
                   className="mb-8"
                 >
                   <div className="flex items-center gap-2 mb-4 opacity-40">
-                    < Sparkles className="w-3 h-3 text-lime" />
+                    <Sparkles className="w-3 h-3 text-lime" />
                     <p className="text-[10px] uppercase tracking-[0.2em] font-medium">Quick Starts</p>
                   </div>
                   <div className="flex flex-wrap gap-2.5">
@@ -582,19 +611,21 @@ export default function AIChat() {
               )}
             </AnimatePresence>
 
-            <form onSubmit={handleSubmit} className="relative">
+            <form onSubmit={handleSubmit} className="relative" role="search" aria-label="Ask a question">
               <input
                 type="text"
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ask anything about voting..."
                 disabled={isTyping}
+                aria-label="Voter information query"
                 className="w-full bg-white/5 border border-white/10 rounded-[24px] px-8 py-5 pr-20 text-sm text-lime placeholder:text-lime/20 focus:outline-none focus:border-lime/40 focus:bg-white/10 focus:ring-4 focus:ring-lime/5 transition-all disabled:opacity-50 shadow-2xl"
               />
               
               <button
                 type="submit"
                 disabled={!input.trim() || isTyping}
+                aria-label="Send message"
                 className="absolute right-3 top-1/2 -translate-y-1/2 w-12 h-12 rounded-[18px] bg-lime text-stone-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all disabled:opacity-20 disabled:grayscale shadow-xl shadow-lime/20 group"
               >
                 <Send className="w-5 h-5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -604,7 +635,7 @@ export default function AIChat() {
             <div className="mt-6 flex items-center justify-center gap-4 opacity-20">
               <span className="h-px w-8 bg-stone" />
               <p className="text-[10px] uppercase tracking-[0.3em] font-mono text-center">
-                Non-partisan AI Assistant · Verified Records
+                Non-partisan Assistant · Verified Records
               </p>
               <span className="h-px w-8 bg-stone" />
             </div>

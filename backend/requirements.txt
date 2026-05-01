@@ -2,7 +2,3 @@ fastapi
 uvicorn[standard]
 pydantic
 python-dotenv
-firebase-admin
-openai
-httpx
-

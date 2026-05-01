@@ -11,6 +11,8 @@ _chat_sessions: dict[str, list[dict]] = {}
 FAQ_FILE = os.path.join(os.path.dirname(__file__), "faqs.json")
 
 def load_faqs():
+    if not os.path.exists(FAQ_FILE):
+        return []
     with open(FAQ_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -105,11 +107,6 @@ def get_faq_response(query: str) -> str:
     return answer
 
 
-async def seed_knowledge_base():
-    """No-op since we're using in-memory election data."""
-    print("[RECORDS] Using in-memory verified election database")
-
-
 async def stream_ai_response(
     user_id: str,
     session_id: str,
@@ -143,6 +140,11 @@ async def stream_ai_response(
         "content": full_response,
         "timestamp": int(time.time() * 1000),
     })
+
+
+async def seed_knowledge_base():
+    """No-op for in-memory setup."""
+    print(f"[RECORDS] Loaded {len(FAQS)} verified election entries")
 
 
 async def get_chat_history(user_id: str, session_id: str) -> list:
