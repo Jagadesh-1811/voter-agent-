@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "question": "Am I eligible to vote?",
+    "answer": "To be eligible to vote, you must: (1) Be a citizen of the country. (2) Be at least 18 years old on or before Election Day. (3) Be a resident of the jurisdiction where you plan to vote. (4) Not be currently serving a felony sentence (requirements vary by state). (5) Not have been adjudicated mentally incompetent by a court."
+  },
+  {
+    "id": 2,
+    "question": "How do I register to vote?",
+    "answer": "To register to vote: (1) Check your state's registration deadline (usually 15-30 days before election). (2) Visit your official state election portal or local election office. (3) Provide proof of identity (driver's license, passport, or national ID). (4) Submit your address and confirm citizenship status. (5) Some states allow same-day registration at the polls on Election Day."
+  },
+  {
+    "id": 3,
+    "question": "What voting methods are available?",
+    "answer": "Available voting methods: (1) In-Person Voting - Visit your assigned polling place on Election Day with valid photo ID. (2) Early In-Person Voting - Many states allow voting 1-2 weeks before Election Day at designated early vote centers. (3) Mail-In/Absentee Ballot - Request a ballot, complete it at home, and return it by the deadline via mail or drop box. (4) Some jurisdictions allow online voting for overseas or military voters."
+  },
+  {
+    "id": 4,
+    "question": "When is the next election?",
+    "answer": "U.S. Federal Elections are held on the first Tuesday after the first Monday in November. Primary elections are typically held in spring/summer before the general election. Check your state's official election website for specific dates and information about upcoming elections in your area."
+  },
+  {
+    "id": 5,
+    "question": "How are votes counted?",
+    "answer": "Votes are counted as follows: (1) In-person ballots are counted by electronic scanning machines or hand-counted for paper ballots. (2) Mail-in ballots go through signature verification and envelope opening before counting - this process can take several days. (3) Provisional ballots are counted after eligibility is confirmed, typically within 7 days. (4) Official results are certified by the state's secretary of state or election commission."
+  },
+  {
+    "id": 6,
+    "question": "What ID do I need to bring to vote?",
+    "answer": "ID requirements vary by state. Most states require a valid photo ID such as a driver's license, state ID card, or passport. Some states accept utility bills or bank statements as proof of residence. Several states have no ID requirements. Check your state's specific requirements before Election Day."
+  },
+  {
+    "id": 7,
+    "question": "Where is my polling location?",
+    "answer": "You can find your polling location by: (1) Using your state's official 'Voter Lookup' tool on the secretary of state website. (2) Checking your voter registration confirmation email or letter. (3) Contacting your local county election office directly. Your polling location is typically assigned based on your registered address."
+  },
+  {
+    "id": 8,
+    "question": "What is early voting?",
+    "answer": "Early voting allows you to cast your ballot in person before Election Day. Benefits include: (1) No need to wait in long lines on Election Day. (2) More flexible scheduling around your busy life. (3) Usually available 1-2 weeks before the election at designated early vote centers. Check your state's early voting dates and locations."
+  },
+  {
+    "id": 9,
+    "question": "How do I request an absentee ballot?",
+    "answer": "To request an absentee ballot: (1) Contact your local election office or use your state's online request system. (2) Provide your name, date of birth, and registered address. (3) Specify the election and reason for requesting (most states offer 'no excuse' absentee voting). (4) The ballot will be mailed to you with instructions. Deadlines to request are typically 7-14 days before the election."
+  },
+  {
+    "id": 10,
+    "question": "What happens if I forget to register?",
+    "answer": "If you miss the registration deadline: (1) Some states offer same-day registration at the polls on Election Day - bring proof of address and identity. (2) You may be able to register and vote provisionally, with your ballot counted once eligibility is verified. (3) Contact your local election office immediately for your options. Best practice is to register at least 30 days before any election."
+  },
+  {
+    "id": 11,
+    "question": "Can I vote by mail?",
+    "answer": "Yes, mail-in voting is available in most states. To vote by mail: (1) Request an absentee or mail-in ballot from your local election office. (2) Complete the ballot carefully following all instructions. (3) Sign and seal the envelope as directed. (4) Return by mail, at a drop box, or in person. Be sure to return it by Election Day - postmarks may not count in all states."
+  },
+  {
+    "id": 12,
+    "question": "What is a primary election?",
+    "answer": "A primary election determines each political party's nominee for the general election. Types include: (1) Closed Primary - Only registered party members can vote. (2) Open Primary - Any registered voter can participate regardless of party. (3) Semi-Closed - Unaffiliated voters can participate but not registered party members. (4) Blanket Primary - All candidates on one ballot, top vote-getters advance."
+  },
+  {
+    "id": 13,
+    "question": "How long does it take to count mail-in ballots?",
+    "answer": "Mail-in ballot counting timelines: (1) Processing begins before Election Day in many states. (2) Signature verification and envelope opening takes 1-2 days per ballot. (3) Official counts are typically completed within 2-7 days after the election. (4) Some states allow counting to continue until all ballots are received (up to 2 weeks). Results are often updated daily until complete."
+  },
+  {
+    "id": 14,
+    "question": "What is a runoff election?",
+    "answer": "A runoff election is held when no candidate receives the required majority in the first election. This is common in: (1) Primary elections where no candidate gets over 50% of votes. (2) Some state and local general elections. (3) Certain states require runoffs for specific offices. Runoffs typically occur 4-6 weeks after the initial election."
+  },
+  {
+    "id": 15,
+    "question": "Can I track my ballot?",
+    "answer": "Yes, most states offer ballot tracking: (1) Use your state's 'Ballot Track' tool on the election website. (2) Enter your name, date of birth, and sometimes voter ID. (3) You'll see when your ballot was sent, received, and counted. (4) Some states send email or text notifications. Sign up for alerts to ensure your vote was received."
+  },
+  {
+    "id": 16,
+    "question": "What is provisional voting?",
+    "answer": "Provisional voting is a safety net when there's a question about your eligibility. You'll vote a provisional ballot that is: (1) Placed in a special envelope with your information. (2) Reviewed by election officials after the election. (3) Counted only if your eligibility is confirmed. Common reasons include: registration issues, moved without updating address, or missing ID."
+  },
+  {
+    "id": 17,
+    "question": "How do I update my voter registration?",
+    "answer": "To update your voter registration: (1) Visit your state's voter registration portal online. (2) Log in with your existing information. (3) Update your name, address, or party affiliation. (4) Submit the changes. You can also update by mail or in-person at your local election office. Updates should be made at least 15-30 days before the election."
+  },
+  {
+    "id": 18,
+    "question": "What is the difference between general and primary elections?",
+    "answer": "Key differences: (1) Primary Election - Held before the general election to choose each party's nominee. Voters select from candidates within their political party. (2) General Election - The main election where voters choose between the party nominees and independent candidates. Determines who actually holds the office."
+  },
+  {
+    "id": 19,
+    "question": "What hours are polls open on Election Day?",
+    "answer": "Poll hours vary by state: (1) Most states open polls from 6:00 AM to 7:00 PM or 8:00 PM local time. (2) Some states open as early as 5:00 AM or close as late as 9:00 PM. (3) If you're in line by closing time, you must be allowed to vote. (4) Early voting and mail-in options can help avoid scheduling conflicts."
+  },
+  {
+    "id": 20,
+    "question": "What is a ballot initiative?",
+    "answer": "A ballot initiative is a direct democracy tool: (1) Citizens propose and vote on new laws or constitutional amendments. (2) Usually requires a certain number of valid signatures to appear on the ballot. (3) If approved by voters, the law takes effect. Initiatives cover topics like taxes, education, environment, and social issues depending on your state's laws."
+  },
+  {
+    "id": 21,
+    "question": "Can I vote if I'm a college student?",
+    "answer": "College students have voting options: (1) Vote at your campus address if you've established residency there. (2) Vote by mail using your home address. (3) Vote early or on Election Day at your campus or home precinct. (4) You cannot vote in both locations - choose one. Register in the state where you intend to vote."
+  },
+  {
+    "id": 22,
+    "question": "What is the electoral college?",
+    "answer": "The Electoral College is how the U.S. elects the President: (1) Each state gets electoral votes equal to its Congressional representation. (2) Most states use a 'winner-takes-all' system. (3) The candidate with 270+ electoral votes wins. (4) Electors in each state cast votes for President and Vice President. Critics argue it can produce outcomes different from the popular vote."
+  },
+  {
+    "id": 23,
+    "question": "How do I find my sample ballot?",
+    "answer": "To find your sample ballot: (1) Visit your state or county election website. (2) Look for 'Sample Ballot' or 'My Ballot' tool. (3) Enter your address to see exactly what races and measures will be on your ballot. (4) Review candidates and measures before Election Day so you're prepared. Sample ballots are usually available 30-45 days before the election."
+  },
+  {
+    "id": 24,
+    "question": "What is early registration?",
+    "answer": "Early registration allows pre-registration for future elections: (1) Many states allow 16- and 17-year-olds to pre-register. (2) Registration becomes active when the voter turns 18. (3) This ensures young voters are ready when they become eligible. (4) Contact your local election office or use the online voter portal to pre-register."
+  },
+  {
+    "id": 25,
+    "question": "What is a special election?",
+    "answer": "A special election is held outside the normal election cycle: (1) Usually called to fill a vacant seat due to death, resignation, or removal of an officeholder. (2) Can be for federal, state, or local offices. (3) May have shorter notice and different procedures. (4) Check with your local election office for dates and registration deadlines."
+  },
+  {
+    "id": 26,
+    "question": "How do I contact my election office?",
+    "answer": "To contact your election office: (1) Find the number on your state's secretary of state website. (2) Search for your county or city election office directly. (3) Many offices have email, phone, and in-person options. (4) Contact them for registration questions, ballot issues, polling location changes, or general information."
+  },
+  {
+    "id": 27,
+    "question": "What is voter ID and do I need it?",
+    "answer": "Voter ID requirements vary by state: (1) Strict Photo ID states require government-issued photo ID. (2) Non-strict Photo ID states accept various forms of ID including utility bills. (3) Some states have no ID requirement - you sign an affidavit. (4) Types accepted typically include driver's license, state ID, passport, military ID, or tribal ID."
+  },
+  {
+    "id": 28,
+    "question": "What is a referendum?",
+    "answer": "A referendum is a direct vote on a specific issue: (1) Legislatures may refer questions to voters. (2) Citizens may initiate referendums through petition. (3) Types include 'bond' (borrowing money), 'advisory' (non-binding), and 'mandatory' (required by law). (4) If approved, the measure becomes law or policy."
+  },
+  {
+    "id": 29,
+    "question": "Can I vote if I'm overseas?",
+    "answer": "Yes, overseas voters have options: (1) Request an absentee ballot using the Federal Post Card Application (FPCA). (2) Vote by mail or fax in most cases. (3) Some states offer electronic ballot delivery via email or fax. (4) The Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA) protects your right to vote from abroad."
+  },
+  {
+    "id": 30,
+    "question": "What is an absentee ballot?",
+    "answer": "An absentee ballot is a vote-by-mail option: (1) Request from your local election office before deadlines. (2) Complete the ballot following all instructions carefully. (3) Some states require a reason, others offer 'no-excuse' absentee voting. (4) Return by mail, at a drop box, or in person. Track your ballot to confirm receipt."
+  },
+  {
+    "id": 31,
+    "question": "What is the registration deadline?",
+    "answer": "Registration deadlines vary by state: (1) Most states require registration 15-30 days before the election. (2) Some states offer same-day registration at polling places. (3) Online registration is available in most states. (4) Check your specific state deadline at Vote.gov or your state election website."
+  },
+  {
+    "id": 32,
+    "question": "How do I know if I'm registered?",
+    "answer": "To verify your registration: (1) Use your state's online voter lookup tool on the election website. (2) Enter your name, date of birth, and sometimes address. (3) Check your registration status, polling location, and sample ballot. (4) If you're not registered or info is incorrect, update immediately."
+  },
+  {
+    "id": 33,
+    "question": "What is a precinct?",
+    "answer": "A precinct is your local voting area: (1) The smallest geographic voting unit in an election district. (2) All voters in a precinct vote at the same polling location. (3) Precincts are determined by population - usually 1,000-5,000 voters. (4) Your precinct determines which races and measures you vote on."
+  },
+  {
+    "id": 34,
+    "question": "What is the difference between absentee and mail-in voting?",
+    "answer": "Technically similar but sometimes different: (1) Absentee - traditionally for voters who will be away on Election Day. (2) Mail-in - available to any voter without requiring an excuse. (3) Some states use these terms interchangeably. (4) Both involve receiving, completing, and returning a ballot by mail."
+  },
+  {
+    "id": 35,
+    "question": "What is exit polling?",
+    "answer": "Exit polling surveys voters as they leave polling places: (1) Conducted by media organizations and research firms. (2) Ask which candidate or measure the voter chose. (3) Used to project winners and analyze voting patterns. (4) Not official results - just statistical samples that can sometimes differ from actual outcomes."
+  },
+  {
+    "id": 36,
+    "question": "Can I take my sample ballot into the voting booth?",
+    "answer": "Yes, in most states you can bring materials into the booth: (1) Your sample ballot with candidate notes. (2) Printed candidate information. (3) Personal notes for measures you're researching. (4) However, you cannot use your phone to photograph your ballot in most states. Check your state's specific rules."
+  },
+  {
+    "id": 37,
+    "question": "What is a bond election?",
+    "answer": "A bond election asks voters to approve borrowing money: (1) Government issues bonds to raise funds for specific projects. (2) Voters approve the debt issuance. (3) Repayment comes from taxes over time. (4) Common for schools, infrastructure, public buildings. 'Yes' means you support the project and incur the debt."
+  },
+  {
+    "id": 38,
+    "question": "What is the voting rights act?",
+    "answer": "The Voting Rights Act protects voting rights: (1) Prohibits discrimination in voting practices. (2) Requires bilingual materials in certain jurisdictions. (3) Mandates pre-clearance for election changes in covered states. (4) Provides federal oversight of elections in areas with histories of discrimination."
+  },
+  {
+    "id": 39,
+    "question": "How do I vote on a recall election?",
+    "answer": "Recall elections have special procedures: (1) A recall petition must first gather enough signatures. (2) If successful, a recall election is scheduled. (3) Voters typically vote YES to recall or NO to keep the official. (4) If recalled, a replacement may be elected in the same or separate election."
+  },
+  {
+    "id": 40,
+    "question": "What is straight-ticket voting?",
+    "answer": "Straight-ticket voting allows voting for all one party's candidates with one selection: (1) Available in some states for partisan offices. (2) A single mark votes for every candidate of that party. (3) Being eliminated in many states due to concerns about ballot marking errors. (4) You can still split your ticket by voting individually for specific races."
+  },
+  {
+    "id": 41,
+    "question": "What is a poll watcher?",
+    "answer": "Poll watchers observe the voting process: (1) Represent candidates, parties, or issue campaigns. (2) Must be registered and follow rules about where they can stand. (3) Can observe but not interfere with voting. (4) Report any irregularities to election officials, not the public directly."
+  },
+  {
+    "id": 42,
+    "question": "How do ranked choice voting work?",
+    "answer": "Ranked choice voting (RCV) allows ranking candidates: (1) Mark your first choice, second choice, and so on. (2) If no candidate gets 50%+ in first counts, the lowest candidate is eliminated. (3) Votes for eliminated candidates go to voters' next choice. (4) Continues until one candidate has a majority."
+  },
+  {
+    "id": 43,
+    "question": "What is election day registration?",
+    "answer": "Election Day registration allows same-day voter registration: (1) Available in many states. (2) Bring proof of address and identity to your polling place. (3) You can register and vote in one visit. (4) Check if your state offers this option and what documents are required."
+  },
+  {
+    "id": 44,
+    "question": "What is a poll worker?",
+    "answer": "Poll workers run Election Day operations: (1) Check in voters and verify registration. (2) Issue ballots and assist with voting machines. (3) Maintain order and ensure voting privacy. (4) Many states recruit volunteers or pay workers for this essential civic duty."
+  },
+  {
+    "id": 45,
+    "question": "How do I become a poll worker?",
+    "answer": "To become a poll worker: (1) Contact your local election office to apply. (2) Most states require workers be registered voters in the county. (3) Training is provided before Election Day. (4) Many offer payment for your service. (5) It's a great way to serve your community and understand elections."
+  },
+  {
+    "id": 46,
+    "question": "What is the Help America Vote Act?",
+    "answer": "The Help America Vote Act (HAVA) modernized elections: (1) Passed after the 2000 election problems. (2) Required voting machines meet certain standards. (3) Created the EAC to oversee elections. (4) Mandated provisional voting and voter ID in some cases."
+  },
+  {
+    "id": 47,
+    "question": "What is a write-in candidate?",
+    "answer": "Write-in candidates are not on the printed ballot: (1) You write their name in a designated space. (2) Must be a qualified candidate for the office. (3) Most people don't win as write-ins. (4) Some elections allow unofficial write-in votes to be cast for any name."
+  },
+  {
+    "id": 48,
+    "question": "What is ballot security?",
+    "answer": "Ballot security measures protect vote integrity: (1) Signature verification for mail-in ballots. (2) Barcode tracking to monitor ballot status. (3) Paper audit trails for electronic voting. (4) Post-election audits to verify accuracy. Election officials use multiple safeguards."
+  },
+  {
+    "id": 49,
+    "question": "How do I vote if I'm disabled?",
+    "answer": "Voters with disabilities have options: (1) Accessible voting machines at all polling places. (2) Curbside voting if you can't enter the building. (3) Assistance from a person of your choice. (4) Audio ballot options for visually impaired. (5) Contact your election office for specific accommodations."
+  },
+  {
+    "id": 50,
+    "question": "What is the difference between certified and unofficial results?",
+    "answer": "Results types differ in timing: (1) Unofficial results are reported election night from vote counting. (2) Include same-day ballots and early counts. (3) Certified results come after the full canvass (1-4 weeks). (4) Include final mail-in, provisional, and overseas ballots. Certified results are official."
+  },
+  {
+    "id": 51,
+    "question": "Can I vote if I moved recently?",
+    "answer": "Moving affects your voting: (1) Update your registration to your new address as soon as possible. (2) You can only vote once - at your current address. (3) If moving within the same state, update with your new address. (4) If moving to a new state, you must register in the new state. Some states allow same-day switching."
+  },
+  {
+    "id": 52,
+    "question": "What is the Federal Election Commission?",
+    "answer": "The FEC oversees federal elections: (1) Regulates campaign finance for federal offices. (2) Enforces election laws. (3) Publishes data on candidates and spending. (4) Does not conduct elections - that responsibility is left to states."
+  },
+  {
+    "id": 53,
+    "question": "What is the difference between popular vote and electoral vote?",
+    "answer": "Two ways to measure election outcomes: (1) Popular vote - total votes from individual voters nationwide. (2) Electoral vote - votes from elected representatives in each state. (3) Presidential elections use the Electoral College. (4) The winner can lose the popular vote but win the electoral vote."
+  },
+  {
+    "id": 54,
+    "question": "What is electioneering?",
+    "answer": "Electioneering is campaigning at or near polling places: (1) Typically prohibited within a certain distance of polling places (100 feet in federal law). (2) Includes wearing candidate clothing or buttons. (3) Posting signs or distributing campaign materials. (4) Election officials will ask you to stop or move."
+  },
+  {
+    "id": 55,
+    "question": "How do I find out who won the election?",
+    "answer": "To find election results: (1) Your state election website publishes official results. (2) News media project winners based on vote counts. (3) Results are updated as ballots are counted. (4) Final certified results take 1-4 weeks after Election Day."
+  },
+  {
+    "id": 56,
+    "question": "What is a ballot measure?",
+    "answer": "A ballot measure is a question on your ballot: (1) Bond measures ask about borrowing money. (2) Charter changes modify local government structure. (3) Initiative measures propose new laws. (4) Referendum measures approve or reject laws passed by the legislature."
+  },
+  {
+    "id": 57,
+    "question": "What is the National Voter Registration Act?",
+    "answer": "The NVRA (Motor Voter Act) increased registration: (1) Required states to offer voter registration at DMV offices. (2) Mandated mail-in registration options. (3) Established voter registration list maintenance rules. (4) Aimed to simplify and expand voter registration."
+  },
+  {
+    "id": 58,
+    "question": "What happens if the lines are too long?",
+    "answer": "If lines are long on Election Day: (1) Stay in line - you have the right to vote if you're there by closing time. (2) Call your election office to report long waits. (3) Consider early voting or vote-by-mail for future elections. (4) Some states may extend hours if there are problems."
+  },
+  {
+    "id": 59,
+    "question": "What is a local election?",
+    "answer": "Local elections cover municipal issues: (1) City council and mayoral races. (2) School board elections. (3) County officials like sheriff and prosecutor. (4) Local ballot measures for taxes and bonds. (5) Often held in off-years separate from federal elections."
+  },
+  {
+    "id": 60,
+    "question": "How do I vote if I'm in the military?",
+    "answer": "Military voters have special protections: (1) The Uniformed and Overseas Citizens Absentee Voting Act (UOCAVA) guarantees your right to vote. (2) Use the Federal Post Card Application (FPCA) to request ballots. (3) Receive ballots by email, fax, or mail. (4) Your state must send ballots at least 45 days before federal elections."
+  },
+  {
+    "id": 61,
+    "question": "What is an election audit?",
+    "answer": "Post-election audits verify accuracy: (1) Hand-count a sample of ballots. (2) Compare to machine counts. (3) Ensure no errors or fraud occurred. (4) Required in most states before results are certified. (5) Public can observe the audit process."
+  },
+  {
+    "id": 62,
+    "question": "What is the difference between a closed and open primary?",
+    "answer": "Primary access varies: (1) Closed primary - only registered party members can vote in that party's primary. (2) Open primary - any registered voter can participate in any party's primary. (3) Semi-closed - unaffiliated voters can participate but not party members. (4) Choose based on your state's rules."
+  },
+  {
+    "id": 63,
+    "question": "What is a canvass?",
+    "answer": "The canvass is the official vote count: (1) Happens after Election Day. (2) Includes verifying all ballots including mail-in and provisional. (3) Resolves any discrepancies found. (4) Results are certified once the canvass is complete. (5) Typically takes 1-4 weeks."
+  },
+  {
+    "id": 64,
+    "question": "How do I vote if I forgot to sign my mail-in ballot?",
+    "answer": "If you forgot to sign your ballot envelope: (1) The signature mismatch will be flagged during processing. (2) Election officials will try to contact you to resolve it. (3) You may need to provide a signature affidavit. (4) If not resolved, your ballot may not be counted."
+  },
+  {
+    "id": 65,
+    "question": "What is election interference?",
+    "answer": "Election interference undermines the process: (1) Illegal voter intimidation or coercion. (2) Voting multiple times. (3) Falsifying votes or election records. (4) Impersonating election officials. Report any suspected interference to election officials or law enforcement immediately."
+  },
+  {
+    "id": 66,
+    "question": "What is the difference between a majority and a plurality?",
+    "answer": "Winning thresholds differ: (1) Majority means over 50% of votes. (2) Plurality means the most votes, even if under 50%. (3) Most U.S. elections use plurality voting. (4) Runoff elections require a majority to avoid a second election."
+  },
+  {
+    "id": 67,
+    "question": "Can I vote if I'm incarcerated?",
+    "answer": "Voting rights while incarcerated vary: (1) Most states prohibit voting while in prison for felony convictions. (2) Some allow voting while on probation or parole. (3) Many restore voting rights after completing sentence. (4) Research your state's specific laws regarding incarceration and voting."
+  },
+  {
+    "id": 68,
+    "question": "What is election transparency?",
+    "answer": "Election transparency ensures public trust: (1) Poll watchers can observe voting and counting. (2) Public can attend election board meetings. (3) Ballot images and results are often published online. (4) Post-election audits are open to observation. (5) Many states have laws ensuring government records are accessible."
+  },
+  {
+    "id": 69,
+    "question": "What is a recount?",
+    "answer": "A recount re-checks the vote count: (1) Triggered automatically if margin is very close (usually under 0.5%). (2) Candidates can also request a recount (may require paying a fee). (3) Involves hand-counting or machine re-scanning ballots. (4) Can change results if errors are found."
+  },
+  {
+    "id": 70,
+    "question": "What is the Voting Accessibility Act?",
+    "answer": "The Voting Accessibility Act ensures access: (1) Requires accessible voting systems for voters with disabilities. (2) Allows curbside voting for those unable to enter polling places. (3) Requires voter registration materials in accessible formats. (4) Ensures at least one accessible machine per polling location."
+  },
+  {
+    "id": 71,
+    "question": "How do I know my vote was counted?",
+    "answer": "To verify your vote was counted: (1) Request a receipt when dropping off your mail-in ballot. (2) Use your state's ballot tracking system online. (3) Some states send notifications when your ballot is received and counted. (4) For in-person voting, there's no individual receipt, but audit trails verify counts."
+  },
+  {
+    "id": 72,
+    "question": "What is election security?",
+    "answer": "Election security protects vote integrity: (1) Paper ballots create physical record. (2) Post-election audits verify accuracy. (3) Cybersecurity protects voter registration databases. (4) Chain of custody procedures prevent tampering. (5) Federal and state agencies monitor for threats."
+  },
+  {
+    "id": 73,
+    "question": "What is the Twenty-Fourth Amendment?",
+    "answer": "The 24th Amendment ended poll taxes: (1) Adopted in 1964. (2) Prohibits requiring payment of poll taxes to vote in federal elections. (3) Ensures poor people aren't denied the right to vote. (4) Later extended to state elections by court decisions."
+  },
+  {
+    "id": 74,
+    "question": "What is gerrymandering?",
+    "answer": "Gerrymandering manipulates district boundaries: (1) Drawing district lines to favor one party. (2) Can concentrate or dilute minority votes. (3) Incumbents often draw lines to protect themselves. (4) Some states use independent commissions for redistricting."
+  },
+  {
+    "id": 75,
+    "question": "How do I vote if I speak another language?",
+    "answer": "Language assistance is available: (1) The Voting Rights Act requires bilingual materials in some areas. (2) Ask for translated sample ballots at your polling place. (3) Bring someone to assist you if needed. (4) Some jurisdictions provide interpreters at polling places."
+  },
+  {
+    "id": 76,
+    "question": "What is the purpose of the electoral college?",
+    "answer": "The Electoral College serves several purposes: (1) Balances influence between small and large states. (2) Provides a buffer between popular will and presidential selection. (3) Ensards representation for all states in the process. (4) Creates a more decisive outcome than pure popular vote might."
+  },
+  {
+    "id": 77,
+    "question": "What is a precinct committee person?",
+    "answer": "Precinct committee people are local party volunteers: (1) Represent their political party in a specific precinct. (2) Help with get-out-the-vote efforts. (3) May serve as poll watchers during elections. (4) Primary way parties organize at the grassroots level."
+  },
+  {
+    "id": 78,
+    "question": "What is the difference between a ballot and a vote?",
+    "answer": "Ballots and votes are related but different: (1) A ballot is the physical or electronic voting document. (2) A vote is your actual selection for a candidate or measure. (3) Your ballot contains your votes. (4) Votes are counted to determine ballot measure outcomes."
+  },
+  {
+    "id": 79,
+    "question": "What is voter suppression?",
+    "answer": "Voter suppression blocks eligible voters: (1) Literacy tests historically excluded minority voters. (2) Poll taxes required payment to vote. (3) Intimidation and harassment tactics. (4) Modern concerns include voter ID laws, reduced polling places, and limited early voting. The Voting Rights Act prohibits many suppression tactics."
+  },
+  {
+    "id": 80,
+    "question": "What is election reform?",
+    "answer": "Election reform changes voting processes: (1) Automatic voter registration. (2) Expanded early voting periods. (3) Election Day voter registration. (4) Ranked choice voting. (5) Campaign finance reforms. (6) Voting rights restoration for formerly incarcerated individuals."
+  },
+  {
+    "id": 81,
+    "question": "What is the difference between a direct and indirect election?",
+    "answer": "Elections can work differently: (1) Direct election - voters choose the office holder directly. (2) Indirect election - voters choose electors who then select the official. (3) U.S. Senators used to be indirectly elected through state legislatures. (4) The President is indirectly elected through the Electoral College."
+  },
+  {
+    "id": 82,
+    "question": "What is a special primary election?",
+    "answer": "A special primary is held when: (1) A current officeholder dies, resigns, or is removed. (2) A new district is created after redistricting. (3) A recall election is triggered. (4) Special primaries narrow candidates before the special general election."
+  },
+  {
+    "id": 83,
+    "question": "What is the role of the Election Assistance Commission?",
+    "answer": "The EAC supports election administration: (1) Develops voting system guidelines. (2) Certifies voting equipment. (3) Conducts research on election administration. (4) Provides training for election officials. (5) Distributes information about best practices."
+  },
+  {
+    "id": 84,
+    "question": "How do I vote on constitutional amendments?",
+    "answer": "Voting on constitutional amendments: (1) Your state legislature places the amendment on the ballot. (2) Read the full text before voting. (3) 'Yes' vote approves the amendment. (4) 'No' vote keeps current constitution. (5) Most amendments require a supermajority to pass."
+  },
+  {
+    "id": 85,
+    "question": "What is election observer status?",
+    "answer": "Election observers monitor the process: (1) Represent political parties, candidates, or civic groups. (2) Must register with election officials in advance. (3) Can observe but not interfere with voting. (4) May watch early voting, Election Day voting, and counting."
+  },
+  {
+    "id": 86,
+    "question": "What is the difference between a primary and a caucus?",
+    "answer": "Primaries and caucuses select nominees differently: (1) Primary - secret ballot like a general election. (2) Caucus - public meeting where supporters publicly declare their choice. (3) Caucuses take longer and require in-person attendance. (4) Party rules determine which method is used."
+  },
+  {
+    "id": 87,
+    "question": "What is a ballot cure?",
+    "answer": "Ballot curing fixes problems with mail ballots: (1) Happens when there's a signature mismatch or missing information. (2) Election officials contact the voter to resolve. (3) Voter typically has until a few days after the election to fix. (4) Provides a chance to ensure your vote counts."
+  },
+  {
+    "id": 88,
+    "question": "What is election night reporting?",
+    "answer": "Election night reporting shows results: (1) Media projects winners based on partial counts. (2) Early results often favor one party (mail-in votes counted later). (3) Final results differ from early projections. (4) Official certified results come later after full canvass."
+  },
+  {
+    "id": 89,
+    "question": "What is a voting system?",
+    "answer": "A voting system is how votes are cast and counted: (1) Paper ballots - hand-marked, hand-counted or scanned. (2) Direct Recording Electronic (DRE) - touch screen voting. (3) Ballot Marking Devices - assist disabled voters, then print ballot. (4) All systems must meet federal standards."
+  },
+  {
+    "id": 90,
+    "question": "What is the difference between in-person and absentee voting?",
+    "answer": "Voting methods differ: (1) In-person voting at a polling place on or before Election Day. (2) Absentee voting involves requesting a ballot by mail. (3) Both methods involve casting a vote. (4) Some states treat early voting and absentee similarly."
+  },
+  {
+    "id": 91,
+    "question": "What is voter confidence?",
+    "answer": "Voter confidence means trusting the election: (1) Believing votes are counted accurately. (2) Feeling eligible voters can participate freely. (3) Trusting the security of voting systems. (4) Election officials work to maintain confidence through transparency and security."
+  },
+  {
+    "id": 92,
+    "question": "What is a special general election?",
+    "answer": "A special general election fills a vacancy: (1) Held when a winner of a regular election cannot take office. (2) May occur due to death, resignation, or disqualification. (3) May coincide with regularly scheduled elections or be separate. (4) Check dates and registration deadlines carefully."
+  },
+  {
+    "id": 93,
+    "question": "What is the purpose of a ballot title?",
+    "answer": "A ballot title summarizes measures: (1) Appears at the top of the ballot measure. (2) Written to be clear and unbiased. (3) Usually includes a brief description of what the measure does. (4) Full text is available in voter pamphlets and online."
+  },
+  {
+    "id": 94,
+    "question": "What is election law?",
+    "answer": "Election law governs the voting process: (1) Federal laws like the Voting Rights Act and HAVA. (2) State constitutions and election codes. (3) Rules for campaigns, candidates, and parties. (4) Procedures for casting and counting ballots."
+  },
+  {
+    "id": 95,
+    "question": "What is voter engagement?",
+    "answer": "Voter engagement increases participation: (1) Educational efforts about how and where to vote. (2) Get-out-the-vote drives by parties and groups. (3) Voter registration drives. (4) Media coverage and public discussions about elections. (5) Social media campaigns encouraging civic participation."
+  },
+  {
+    "id": 96,
+    "question": "What is the difference between a proposition and a statute?",
+    "answer": "These differ in how they become law: (1) Statute - passed by the legislature and signed by the governor. (2) Proposition - placed on the ballot by citizen petition. (3) Both can be repealed by voters if passed by initiative. (4) Prop 13 and similar are famous examples of propositions."
+  },
+  {
+    "id": 97,
+    "question": "What is voter protection?",
+    "answer": "Voter protection ensures voting rights: (1) Laws prohibit discrimination at the polls. (2) Federal and state authorities enforce voting laws. (3) Election observers monitor for violations. (4) Voters can report problems to election officials or the Department of Justice."
+  },
+  {
+    "id": 98,
+    "question": "What is election litigation?",
+    "answer": "Election litigation resolves disputes: (1) Challenges to ballot measures or election results. (2) Disputes over voter registration or voting rights. (3) Candidate eligibility lawsuits. (4) Redistricting challenges. Courts ultimately decide these cases."
+  },
+  {
+    "id": 99,
+    "question": "What is civic education?",
+    "answer": "Civic education teaches about democracy: (1) How elections work in the U.S. (2) Rights and responsibilities of citizens. (3) History of voting rights in America. (4) How to register and vote. (5) Importance of participating in democracy."
+  },
+  {
+    "id": 100,
+    "question": "What is the future of elections?",
+    "answer": "Election trends shaping the future: (1) Increased mail-in and early voting options. (2) Better accessibility for voters with disabilities. (3) Enhanced cybersecurity measures. (4) Election Day becoming a holiday in some places. (5) Continued debates about voting access and security."
+  }
+]

@@ -1,0 +1,49 @@
+# dependencies
+node_modules/
+.pnp/
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+.env
+.env.local
+.env.*
+pip-log.txt
+pip-delete-this-directory.txt
+
+# next.js
+.next/
+out/
+build/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# Secrets (DO NOT COMMIT)
+firebase-admin.json
+*.json
+!package.json
+!tsconfig.json
+!next.config.ts
+!postcss.config.mjs
+!eslint.config.mjs
+!tailwind.config.ts
+!faqs.json
