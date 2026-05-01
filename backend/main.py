@@ -1,7 +1,9 @@
+import os
 import asyncio
 import uuid
 from contextlib import asynccontextmanager
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
@@ -9,6 +11,8 @@ from pydantic import BaseModel
 
 from ai_service import stream_ai_response, get_chat_history, seed_knowledge_base
 
+# Load environment variables
+load_dotenv()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -24,10 +28,13 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
+# Configure CORS origins from environment
+frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",
+        frontend_url,
         "http://127.0.0.1:3000",
         "http://localhost:3001",
     ],
@@ -51,6 +58,15 @@ class HistoryRequest(BaseModel):
 
 
 # ── Routes ──────────────────────────────────────────────────────────────────
+
+@app.get("/")
+async def root():
+    return {
+        "message": "Welcome to VoteAgent API",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 
 @app.get("/health")
 async def health():
