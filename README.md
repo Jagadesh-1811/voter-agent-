@@ -16,6 +16,7 @@
 - **Premium Glassmorphic UI**: High-fidelity interface built with Next.js, Framer Motion, and Tailwind CSS.
 - **Privacy First**: Unique local-first session management. Your entire chat history is stored in your browser's local cache (LocalStorage), ensuring absolute privacy and zero server-side data persistence.
 - **Instant Persistence**: Leverages the local cache for lightning-fast history retrieval and multi-session management without the need for a traditional database.
+- **Downloadable Records**: Export any chat session directly to PDF with a single click for offline reference and official documentation.
 - **Hyper-Local Intelligence**: Detailed insights into registration, polling locations, and eligibility.
 
 ---
